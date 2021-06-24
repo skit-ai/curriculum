@@ -1,0 +1,21 @@
+# Building
+
+- Packaging software
+    - Python and Go packages
+    - Dockerfiles and Helm charts
+    - CLI applications
+- Testing
+    - Types (ml/data)
+    - Tools
+    - ...
+- APIs
+    - HTTP and GRPC, with streaming
+    - Async APIs
+- guidelines
+- Git
+    - Git Workflows
+    - Git LFS / DVC
+- Versioning
+    - Data
+    - Packages
+    - APIs

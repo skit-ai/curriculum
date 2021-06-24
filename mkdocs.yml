@@ -2,7 +2,13 @@ site_name: Vernacular Tech Curriculum
 repo_url: https://github.com/Vernacular-ai/curriculum
 
 nav:
-    - index.md
+    - Introduction: index.md
+    - Part 1:
+        - building/index.md
+    - Part 2:
+        - deploying/index.md
+    - Part 3:
+        - misc/index.md
 
 markdown_extensions:
   - admonition
@@ -27,7 +33,9 @@ theme:
     accent: cyan
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - content.tabs.link
+    - navigation.instant
   icon:
     repo: fontawesome/brands/github-alt
     logo: material/school
