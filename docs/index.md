@@ -8,73 +8,67 @@ deliver high quality enterprise grade AI software.
 
     The first version of the curriculum covers topics that are independent of your
     working sub-team. We will have sub-team specific content in next releases.
+
+---
+
+## Content Sketch
+
+!!! warning
+
+    Content is in progress.
     
-    
-- [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
-- [ ] Vestibulum convallis sit amet nisi a tincidunt
-    * [x] In hac habitasse platea dictumst
-    * [x] In scelerisque nibh non dolor mollis congue sed et metus
-    * [ ] Praesent sed risus massa
-- [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
+### Part I: Building
 
-The homomorphism $f$ is injective if and only if its kernel is only the 
-singleton set $e_G$, because otherwise $\exists a,b\in G$ with $a\neq b$ such 
-that $f(a)=f(b)$.
+- Packaging software
+    - Python and Go packages
+    - Dockerfiles and Helm charts
+    - CLI applications
+- Testing
+    - Types (ml/data)
+    - Tools
+    - ...
+- APIs
+    - HTTP and GRPC, with streaming
+    - Async APIs
+- guidelines
+- Git
+    - Git Workflows
+    - Git LFS / DVC
+- Versioning
+    - Data
+    - Packages
+    - APIs
 
+### Part II: Going live
+- Deployment
+    - Hardware requirement and load testing
+    - Security
+    - CI / CD
+- Observability
+    - Logging and Debugging
+    - Profiling
+    - Network debugging
+    - Service Dashboards
+    - Data Observability
 
-=== "Python"
+### Part III: Miscellaneous Programming Topics
+- Data
+    - Data interchange formats and schemata.
+    - Queries.
+    - Dataframes and manipulation
+    - EDA, reports, and visualizations.
+- Audio Programming
+- Basic Sklearn workflows
+- tensors / numpy
+- Interop (RPCs, sockets, pipes, FFIs)
+- DSL (parsing)
+- Concurrency
+- Events and Streams
 
-    ``` c
-    #include <stdio.h>
+### Part IV: Tools?
 
-    int main(void) {
-      printf("Hello world!\n");
-      return 0;
-    }
-    ```
+- IDE stuff and tooling
 
-=== "GoLang"
+## Things to do
 
-    ``` c++
-    #include <iostream>
-
-    int main(void) {
-      std::cout << "Hello world!" << std::endl;
-      return 0;
-    }
-    ```
-
-| hel                  | ere                                     |
-|----------------------|-----------------------------------------|
-| Data                 | Data schema                             |
-|                      | Data queries                            |
-|                      | Reports and analyses and visualizations |
-| API                  | HTTP and GRPC streaming                 |
-|                      | Async requests                          |
-| Packaging            | Pip packages                            |
-|                      | Dockerfile and Helm charts              |
-|                      | CLI apps                                |
-| Deployment           | Hardware calculation and load testing   |
-|                      | Security                                |
-|                      | Deployment                              |
-|                      | CI / CD                                 |
-| Observability        | Logging and Debugging                   |
-|                      | Profiling                               |
-|                      | Networking debugging                    |
-|                      | Service Dashboards                      |
-|                      | Data Observability                      |
-| Git                  | Git workflows                           |
-|                      | Git LFS / DVC                           |
-| Versioning           | Data                                    |
-|                      | Packages                                |
-|                      | APIs                                    |
-| Testing              | Types (ML/Data) / Tool / ...            |
-| ML Programming       | Basic Sklearn workflows                 |
-|                      | Dataframes and manipulation             |
-|                      | Tensors / numpy                         |
-| Advanced Programming | Interop (RPCs, sockets, pipes, FFIs)    |
-|                      | DSL (Parsing)                           |
-|                      | IDE stuff and tooling                   |
-|                      | Audio                                   |
-|                      | Concurrency                             |
-|                      | Events and streams                      |
++ Tutorial (could be video, links), examples, and assignment.
