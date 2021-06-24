@@ -7,11 +7,11 @@ nav:
 theme:
   name: material
   palette:
-    primary: black
+    primary: white
     accent: cyan
   features:
     - navigation.tabs
   icon:
     repo: fontawesome/brands/github-alt
-    logo: material/waveform
+    logo: material/school
     favicon: fontawesome/brands/git-alt
