@@ -1,3 +1,3 @@
 # curriculum
 
-Onboarding curriculum for Vernacular tech team.
+Onboarding curriculum for Vernacular tech.

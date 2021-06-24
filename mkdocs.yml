@@ -1,0 +1,17 @@
+site_name: Vernacular Tech Curriculum
+repo_url: https://github.com/Vernacular-ai/curriculum
+
+nav:
+    - index.md
+
+theme:
+  name: material
+  palette:
+    primary: black
+    accent: cyan
+  features:
+    - navigation.tabs
+  icon:
+    repo: fontawesome/brands/github-alt
+    logo: material/waveform
+    favicon: fontawesome/brands/git-alt
