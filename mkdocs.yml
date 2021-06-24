@@ -4,6 +4,22 @@ repo_url: https://github.com/Vernacular-ai/curriculum
 nav:
     - index.md
 
+markdown_extensions:
+  - admonition
+  - pymdownx.tabbed
+  - pymdownx.superfences
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
+  - meta
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 theme:
   name: material
   palette:
@@ -11,6 +27,7 @@ theme:
     accent: cyan
   features:
     - navigation.tabs
+    - content.tabs.link
   icon:
     repo: fontawesome/brands/github-alt
     logo: material/school
