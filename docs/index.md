@@ -1,15 +1,15 @@
 # Introduction
 
-Welcome to the Vernacular tech team's onboarding curriculum. We will cover the
-following items here in form of documents, sessions, and assignments to help you
-deliver high quality enterprise grade AI software.
+Welcome to the Vernacular tech team's onboarding curriculum. The curriculum is a
+set of guided exercises to help you get onboarded on our technology and make a
+move towards delivering high quality enterprise grade AI software.
 
 !!! note
-
-    The first version of the curriculum covers topics that are independent of your
-    working sub-team. We will have sub-team specific content in next releases.
-
----
+    The curriculum is not a reference manual, nor is it a guide for our exact
+    tech stack.
+    
+The curriculum is divided in various parts and sections. Each section contains
+exercises that you are supposed to solve.
 
 ## Content Sketch
 
