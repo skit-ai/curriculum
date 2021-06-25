@@ -9,6 +9,8 @@ nav:
         - deploying/index.md
     - Part 3:
         - misc/index.md
+    - Part 4:
+        - misc/np.md
 
 markdown_extensions:
   - admonition
