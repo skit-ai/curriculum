@@ -1,14 +1,1 @@
 # Miscellaneous Programming Topics
-- Data
-    - Data interchange formats and schemata.
-    - Queries.
-    - Dataframes and manipulation
-    - EDA, reports, and visualizations.
-- Audio Programming
-- Basic Sklearn workflows
-- tensors / numpy
-- Interop (RPCs, sockets, pipes, FFIs)
-- DSL (parsing)
-- Concurrency
-- Events and Streams
-- IDE stuff and tooling

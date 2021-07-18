@@ -1,3 +1,1 @@
 # Miscellaneous non-programming Topics
-
-...
