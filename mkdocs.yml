@@ -5,6 +5,7 @@ nav:
     - Introduction: index.md
     - Part 1:
         - building/index.md
+        - building/01.md
     - Part 2:
         - deploying/index.md
     - Part 3:
