@@ -20,3 +20,7 @@ starting with an exercise are provided in the `./exercises` directory in the
 repository root.
 
 Once you are ready, go [the first part on building](./building/index.md).
+
+---
+
+![cc-by-nc-sa](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)
