@@ -168,6 +168,5 @@ The useEffect Hook can be determined as componentDidMount, componentDidUpdate, a
 - Exercise for the react basic \*
   There is a exercise folder given in the directory. You have been given the designs for creating a todolist app.
 
-[^1]:
-    - https://www.geeksforgeeks.org/reactjs-lifecycle-components/
+### Resources followed
     - https://reactjs.org/docs/getting-started.html
