@@ -56,7 +56,8 @@ We updated the state by calling setCounter in each of the functions handling a b
 In short, React automatically monitors every component state for changes and updates the DOM appropriately.
 
 - props
-  Props can be considered as properties of a component which we pass through to define certain aspect of the UI.
+  
+Props can be considered as properties of a component which we pass through to define certain aspect of the UI.
 
 ```JSX
 const Display = (props) => {
@@ -86,9 +87,11 @@ It has its phases from initialization to mountin to updating state to unmounting
 
 Some lifecycle methods are
 
-shouldComponentUpdate() Function: By default, every state or props update re-render the page but this may not always be the desired outcome, sometimes it is desired that updating the page will not be repainted. The shouldComponentUpdate() Function fulfills the requirement by letting React know whether the component’s output will be affected by the update or not. shouldComponentUpdate() is invoked before rendering an already mounted component when new props or state are being received. If returned false then the subsequent steps of rendering will not be carried out. This function can’t be used in the case of forceUpdate(). The Function takes the new Props and new State as the arguments and returns whether to re-render or not.
+- shouldComponentUpdate() Function: 
+By default, every state or props update re-render the page but this may not always be the desired outcome, sometimes it is desired that updating the page will not be repainted. The shouldComponentUpdate() Function fulfills the requirement by letting React know whether the component’s output will be affected by the update or not. shouldComponentUpdate() is invoked before rendering an already mounted component when new props or state are being received. If returned false then the subsequent steps of rendering will not be carried out. This function can’t be used in the case of forceUpdate(). The Function takes the new Props and new State as the arguments and returns whether to re-render or not.
 
-componentDidUpdate() Function: tThis function is invoked after the component is rerendered i.e. this function gets invoked once after the render() function is executed after the updation of State or Props.
+- componentDidUpdate() Function: 
+This function is invoked after the component is rerendered i.e. this function gets invoked once after the render() function is executed after the updation of State or Props.
 
 You can take a look at the examples given [here](https://reactjs.org/docs/state-and-lifecycle.html)
 
