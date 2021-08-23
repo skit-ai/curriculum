@@ -10,10 +10,11 @@ Nevertheless we will go through some concepts of react that might be interesting
 
 React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.
 In react one might have seen earlier strange mixture of HTML and JavaScript inside each component. React actually uses a language called JSX that allows HTML to be mixed with JavaScript.
-Not only can you use JSX to return pre-defined HTML elements, you can also create your own. For example, instead of rendering <h2> elements directly in the class component, you can render the functional component which returns the same thing.
+Not only can you use JSX to return pre-defined HTML elements, you can also create your own. For example instead of rendering h2 elements directly in the class component, you can render the functional component which returns the same thing.
 So lets start by understanding some fundamental concepts of react.
 
 - state
+  
   In React we keep the data in regular JS variables and maintains its own virtual DOM(Document Object Model). So basically whenever you want to update something in the DOM we have to locate the appropriate node and then manually append or remove elements. React then compares the virtual DOM and the actual DOM by checking the application state. It then updates the UI accordingly.
   For example if we store a counter value and two buttons for increment and decrement.
 
