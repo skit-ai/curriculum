@@ -95,7 +95,6 @@ This function is invoked after the component is rerendered i.e. this function ge
 
 You can take a look at the examples given [here](https://reactjs.org/docs/state-and-lifecycle.html)
 
-So lets start by analysing what do we mean by components and how do we set it up.
 
 Here is an example of simple navbar.
 
