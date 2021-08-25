@@ -1,4 +1,4 @@
-##What is debugging? 
+# What is debugging?
 Debugging is an action of removing issues or potential errors that can cause your code to crash or have unexpected behavior. So this post is about ways to debug code.
 
 Programming allows you to think about thinking, and while debugging you learn learning. Here are some of the ways you
@@ -88,7 +88,7 @@ Enter the number you want to calculate factorial for: 5
 (Pdb) 
 ```
 
-You will see something similar to  ☝️  in your terminal. It shows the path of the file along with the line number where
+You will see something similar to  ☝️   in your terminal. It shows the path of the file along with the line number where
 the breakpoint is added.
 ```angular2html
 
