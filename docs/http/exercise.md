@@ -14,6 +14,12 @@ While going through the exercise, try typing every command out instead of just
 copy-pasting. Make sure you understand everything that you type and every bit
 of what you get in the response.
 
+Say hello to the service by running:
+
+```
+curl --location -g --request GET '{{BASE_URL}}'
+```
+
 The service is a mock employee record keeper using which you can create data of
 emplyees, fetch that data, update the data and remove it. Since this data can
 be sensitive, it also has a form of email-password authentication with a 
