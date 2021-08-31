@@ -30,8 +30,7 @@ methods are sometimes referred to as HTTP verbs. The most commonly used ones
 are GET, PUT, POST and DELETE. Together, these four methods make up the _CRUD_
 , i.e., Create-Read-Update-Delete, interface for a resource.
 
-Read about these and other methods [here](https://developer.mozilla.org/en-US/
-docs/Web/HTTP/Methods) along with their specifications and browser support.
+Read about these and other methods [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) along with their specifications and browser support.
 
 ## Messages
 
@@ -54,8 +53,7 @@ the backend programs and people maintaining the internet system.
 resides when large information is to be passed. This is where the contents of 
 the associated resource resides.
 
-Read about the HTTP messages [here](https://developer.mozilla.org/en-US/docs/
-Web/HTTP/Messages).
+Read about the HTTP messages [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages).
 
 ## Status Codes
 
@@ -68,8 +66,7 @@ successfully completed. Responses are grouped in five classes:
 4. Client errors (400–499)
 5. Server errors (500–599)
 
-You can find the status codes defined by section 10 of RFC 2616 on [MDN](https
-://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+You can find the status codes defined by section 10 of RFC 2616 on [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
 
 # HTTP with REST
 
@@ -78,8 +75,7 @@ almost everytime a convention that when you use HTTP, you practice REST. It's
 true that HTTP and REST are two very different things.
 
 REST stands for Representational State Transfer. It was first described in [Roy
-Fielding’s now-famous dissertation](https://www.ics.uci.edu/~fielding/pubs/
-dissertation/top.htm). REST is not a standard or a specification. Instead, 
+Fielding’s now-famous dissertation](https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm). REST is not a standard or a specification. Instead, 
 Fielding described REST as an architectural style for distributed hypermedia 
 systems. He believed there are several attributes of a RESTful architecture 
 that would make it ideal for large interconnected systems such as the internet.
