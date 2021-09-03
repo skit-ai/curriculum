@@ -2,7 +2,7 @@
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Vernacular-ai/curriculum/docs?style=flat-square)
 
-Onboarding curriculum for Vernacular tech. Accessible [here](https://vernacular-ai.github.io/curriculum/).
+Onboarding curriculum for Vernacular tech. Accessible [here](https://skit-ai.github.io/curriculum/).
 
 ## Developing
 
