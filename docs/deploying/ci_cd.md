@@ -1,6 +1,6 @@
 # CI/CD 
 
-Continuous Integration and Continuous Deployment/Delivery are fundamental DevOps best pratices where develoeprs merge changes into a central repository where automated builds and checks run and then auto-deployed. 
+Continuous Integration and Continuous Deployment/Delivery are fundamental DevOps best pratices where developers merge changes into a central repository where automated builds and checks run and then auto-deployed. 
 
 We run our CIs on GitLab and use ArgoCD to deploy code to our Kubernetes clusters. 
 A thorough explanation of our CI/CD architecture and how to use it can be found [here](https://outline.skit.ai/doc/build-and-deploy-using-cicd-TQrnrCpBox).
