@@ -1,5 +1,5 @@
-site_name: Vernacular Tech Curriculum
-repo_url: https://github.com/Vernacular-ai/curriculum
+site_name: Skit Tech Curriculum
+repo_url: https://github.com/skit-ai/curriculum
 
 nav:
     - Introduction: index.md
