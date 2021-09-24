@@ -1,6 +1,6 @@
 # Introduction
 
-Welcome to the Vernacular tech team's onboarding curriculum. The curriculum is a
+Welcome to the Skit tech team's onboarding curriculum. The curriculum is a
 set of guided exercises to help you get onboarded on our technology and make a
 move towards delivering high quality enterprise grade AI software. It is _not_ a
 reference manual, nor is it a styleguide for our tech stack.
