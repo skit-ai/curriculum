@@ -21,7 +21,7 @@ Now that you understand the basic idea behind feature flags, let's get you set u
 Clone the following repository:
 
 ```
-TODO: repo link
+https://gitlab.com/vernacularai/tools/curriculum-feature-flag
 ```
 
 Enter the cloned directory and run:
