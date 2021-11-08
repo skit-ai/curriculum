@@ -139,7 +139,7 @@ Create a new segment by clicking on the "New Segment" button and then defining i
 
 On creating a new segment, you'll notice "No constraints (ALL will pass)" being displayed. This means since we haven't provided any constraints on our segment, all our requests will be a part of the control buckets. You may leave it to be empty for now.
 
-To finish our initial setup, we'll have to define a distribution among the variants for the segment. Click on "edit", select your variant's checkbox and use the slider to increase its percentage to 100. This means all our requests passing the segment will be distrubuted completely to the variant. Save the distribution and now make a request to the `flagr-hello` api endpoint. Make sure you have correctly initialised the environment variables and provided your `flagKey` in the `?key` query param. If you initialised the rollout to 50% and the message in your variant says "Privyet", you should receive "Privyet" in response half the times you make a request.
+To finish our initial setup, we'll have to define a distribution among the variants for the segment. Click on "edit", select your variant's checkbox and use the slider to increase its percentage to 100. This means all our requests passing the segment will be distributed completely to the variant. Save the distribution and now make a request to the `flagr-hello` api endpoint. Make sure you have correctly initialised the environment variables and provided your `flagKey` in the `?key` query param. If you initialised the rollout to 50% and the message in your variant says "Privyet", you should receive "Privyet" in response half the times you make a request.
 
 #### Further Customisation
 
