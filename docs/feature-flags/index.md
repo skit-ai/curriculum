@@ -81,7 +81,7 @@ Test out our feature flag for Russian clients similar to the previous example an
 
 Flagr is a great tool for implementing feature flags and A/B testing. You'll be employing it for continuing the rest of this exercise. Be sure to go through its 
 
-For using Flagr, let's dial our use case up a notch. Suppose your MNC now serves clients in multiple regions throughout the world, with each region having any number of languages and people of different ages. Currently, you respond with a "Hello" indiscrimately but your product manager recently asked you to start tuning this greeting for various combinations of all these properties. The api that handles this greeting supports query params, `location`, `lang` and `age`, for identifying demographies concerning region, language and age respectively.
+For using Flagr, let's dial our use case up a notch. Suppose your MNC now serves clients in multiple regions throughout the world, with each region having any number of languages and people of different ages. Currently, you respond with a "Hello" indiscriminately but your product manager recently asked you to start tuning this greeting for various combinations of all these properties. The api that handles this greeting supports query params, `location`, `lang` and `age`, for identifying demographies concerning region, language and age respectively.
 
 The api you'll be is of the form:
 
