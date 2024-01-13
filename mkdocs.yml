@@ -12,6 +12,7 @@ nav:
         - deploying/index.md
     - Part 3:
         - misc/index.md
+        - misc/01-parsing.md
     - Part 4:
         - misc/np.md
 
