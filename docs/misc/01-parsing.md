@@ -2,13 +2,13 @@
 
 Develop a simple parser in your preferred programming language that can read and
 interpret basic constructs of the [Ink narrative
-language](https://www.inklestudios.com/ink/) which is n English like language to
-write interactive fictions.
+language](https://www.inklestudios.com/ink/) which is an English like language
+to write interactive fictions.
 
 The idea of this exercise is to learn writing parsers and understand connected
-challenges. The recommended way to go about this exercise is to try writing the
-parser both from scratch (starting from pure RegEx) and using common parsing
-framework or approach.
+challenges. The recommended way to go about this exercise is to first write the
+parser from scratch (starting from pure RegEx) and the use common parsing
+frameworks or approaches.
 
 Here are a few expectations from your program:
 
