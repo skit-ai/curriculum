@@ -1,0 +1,786 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>Feature Flags - Skit Tech Curriculum</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="cyan">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#feature-flags" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Skit Tech Curriculum" class="md-header__button md-logo" aria-label="Skit Tech Curriculum" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Skit Tech Curriculum
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Feature Flags
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/skit-ai/curriculum" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Introduction
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../building/" class="md-tabs__link">
+        Part 1
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../deploying/" class="md-tabs__link">
+        Part 2
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../misc/" class="md-tabs__link">
+        Part 3
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../misc/np/" class="md-tabs__link">
+        Part 4
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Skit Tech Curriculum" class="md-nav__button md-logo" aria-label="Skit Tech Curriculum" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+
+    </a>
+    Skit Tech Curriculum
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/skit-ai/curriculum" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Part 1
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Part 1" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Part 1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../building/" class="md-nav__link">
+        Building
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../building/01/" class="md-nav__link">
+        FFtrim
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../building/02/" class="md-nav__link">
+        FFtrim Service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../building/03/" class="md-nav__link">
+        FFtrim gRPC Service
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Part 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Part 2" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Part 2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deploying/" class="md-nav__link">
+        Going Live
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Part 3
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Part 3" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Part 3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../misc/" class="md-nav__link">
+        Miscellaneous Programming Topics
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../misc/01-parsing/" class="md-nav__link">
+        Ink Language Parser
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Part 4
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Part 4" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Part 4
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../misc/np/" class="md-nav__link">
+        Miscellaneous non-programming Topics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-you-up" class="md-nav__link">
+    Setting you up
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#an-example-feature-flag" class="md-nav__link">
+    An example Feature flag
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#targetted-testing" class="md-nav__link">
+    Targetted testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flagr" class="md-nav__link">
+    Flagr
+  </a>
+  
+    <nav class="md-nav" aria-label="Flagr">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variant" class="md-nav__link">
+    Variant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#segment" class="md-nav__link">
+    Segment
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#further-customisation" class="md-nav__link">
+    Further Customisation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/skit-ai/curriculum/edit/master/docs/feature-flags/index.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="feature-flags">Feature Flags</h1>
+<p>The basic idea behind feature flags is to turn a particular feature on/off based on some flag, or condition. A simple pseudocode translation can be:</p>
+<div class="highlight"><pre><span></span><code>if useNewCoolFeature == true {
+  newCoolFeature()
+} else {
+  sameOldBehaviour()
+}
+</code></pre></div>
+<p>This pseudocode demonstrates a simple statement that checks if a "new cool feature" is enabled. If it is, the behaviour of the new feature is observed, and if it isn't, nothing new happens and everything works as it had previously. Feature flags are essentially "if statements" that allows you to validate your new features and test out their functionalities, thus minimizing risks without much disruptions.</p>
+<p>When this code is deployed to production, it will be deployed as usual. However, it will remain inactive until the feature flag is explicitly activated.</p>
+<p>Now that you understand the basic idea behind feature flags, let's get you set up for an exercise to get you familiar with a few practices and an amazing tool <a href="https://checkr.github.io/flagr/#/home">Flagr</a>.</p>
+<h2 id="setting-you-up">Setting you up</h2>
+<p>Clone the following repository:</p>
+<div class="highlight"><pre><span></span><code>https://gitlab.com/vernacularai/tools/curriculum-feature-flag
+</code></pre></div>
+<p>Enter the cloned directory and run:</p>
+<div class="highlight"><pre><span></span><code>go run main.go
+</code></pre></div>
+<p>and make an HTTP request:</p>
+<div class="highlight"><pre><span></span><code>curl --location --request GET &#39;localhost:8080&#39;
+</code></pre></div>
+<p>You should get the text <code>Hello!</code> in the response.</p>
+<h2 id="an-example-feature-flag">An example Feature flag</h2>
+<p>Assume you're developing a new feature in which instead of just returning a simple <code>Hello!</code> message, you want to send something more friendly like <code>Hello! Have fun with this excercise!</code>. But you are not sure if this is a good idea and want to validate it first with some, say 10%, of your users. This "new feature" is already implemented with a make-do feature flag and all you need to do is update its rollout percentage. Do:</p>
+<div class="highlight"><pre><span></span><code>curl --location --request PUT &#39;localhost:8080/rollout/10&#39;
+</code></pre></div>
+<p>You may enter any float value, less than 100, for the new rollout percentage.</p>
+<p>This will tell our service to send the new message to 10% of all our users, after which you will use some metric to calculate its success.</p>
+<p>Now all that's left is to check if our feature flag is actually working. Manually make the "hello" request for a sufficient number of times and compare the number times your new feature works with those times it didn't. The ratio should roughly amount to the rollout percentage you provided as an input.</p>
+<div class="highlight"><pre><span></span><code>curl --location --request PUT &#39;localhost:8080/rollout/10&#39;
+</code></pre></div>
+<h2 id="targetted-testing">Targetted testing</h2>
+<p>Suppose you're a part of an MNC with clients in Russia. There, your service says "Hello!" in Russian as "Privyet!". Since "Privyet" is like an informal "Hi" and you would like to test if saying a more formal "Zdrastvuyte", which is also Russian for "Hello", you implement a feature flag that rollouts this new feature to 40% of the Russian clients. Also, to identify a Russian client, your service uses a query param <code>?location=ru</code>.</p>
+<p>Let's test out our existing Russian "Hello" first:</p>
+<div class="highlight"><pre><span></span><code>curl --location --request GET &#39;localhost:8080?location=ru&#39;
+</code></pre></div>
+<p>You'll get "Privyet" in Cyrillic script, which is the writing system used for the Russian language, in the response message.</p>
+<p>Update the rollout percentage for Russia too:</p>
+<div class="highlight"><pre><span></span><code>curl --location --request PUT &#39;localhost:8080/rollout/40?location=ru&#39;
+</code></pre></div>
+<p>Test out our feature flag for Russian clients similar to the previous example and compare the responses to confirm if the rollout is similar to what was provided in input.</p>
+<h2 id="flagr">Flagr</h2>
+<p>Flagr is a great tool for implementing feature flags and A/B testing. You'll be employing it for continuing the rest of this exercise. Be sure to go through its </p>
+<p>For using Flagr, let's dial our use case up a notch. Suppose your MNC now serves clients in multiple regions throughout the world, with each region having any number of languages and people of different ages. Currently, you respond with a "Hello" indiscriminately but your product manager recently asked you to start tuning this greeting for various combinations of all these properties. The api that handles this greeting supports query params, <code>location</code>, <code>lang</code> and <code>age</code>, for identifying demographies concerning region, language and age respectively.</p>
+<p>The api you'll be is of the form:</p>
+<div class="highlight"><pre><span></span><code>curl --location --request GET &#39;localhost:8080/flagr-hello?location=&lt;region&gt;&amp;lang=&lt;language&gt;&amp;age=&lt;age&gt;&amp;key=&lt;flagrKey&gt;
+</code></pre></div>
+<p>The query param "key" here is the <code>flagKey</code> of the flag you'll be creating shortly. Try making requests to the api. For example:</p>
+<div class="highlight"><pre><span></span><code>curl --location --request GET &#39;localhost:8080/flagr-hello?lang=en&amp;location=us&amp;age=20&amp;key=kzpo6597au5ivg876&#39;
+</code></pre></div>
+<p>You should get always get a message "Hello!" in response.</p>
+<p>We have a flagr instance hosted on our server that you can use. Ask <em>#devops</em> for:
+* URL for the hosted Flagr
+* Credentials for authenticating into the instance: <em>username</em> and <em>password</em></p>
+<p>Stop the currently running exercise server on port 8080 and export the above values as environment variables:</p>
+<div class="highlight"><pre><span></span><code>export FLAGR_URL = &lt;FLAGR_URL&gt;
+export FLAGR_USERNAME = &lt;FLAGR_USERNAME&gt;
+export FLAGR_PASSWORD = &lt;FLAGR_PASSWORD&gt;
+</code></pre></div>
+<p>and start it again:</p>
+<div class="highlight"><pre><span></span><code>go run main.go
+</code></pre></div>
+<p>If you've added the environment variables correctly, you should have a valid Flagr client for employing your <em>soon to be created</em> new flag. Go to the hosted flagr on a browser and authenticate using the credentials you received. Create a new flag by giving it a name and clicking on the <em>Create New Flag</em> button. The new flag should be visible in the list now. Select it.</p>
+<p>You should now see the configuration page for the flag. Make note of your <em>Flag Key</em>. The next steps involve creating a "Variant" and a "Segment".</p>
+<h4 id="variant">Variant</h4>
+<p>Variant represents the possible variation of a flag. For example, control/treatment, green/yellow/red, etc. It is any property that one would like to vary based on certain condition described in the "Segments".</p>
+<p>Enter a name for your variant in "Key" input box and click on "Create Variant". Select the "Variant Attachment" expansion panel and in the editor, enter the new message you'd like to show your audience. For example:</p>
+<div class="highlight"><pre><span></span><code>{
+    &quot;message&quot;: &quot;Privyet&quot;
+}
+</code></pre></div>
+<p>Save the variant and move to the "Segments" section.</p>
+<h4 id="segment">Segment</h4>
+<p>Create a new segment by clicking on the "New Segment" button and then defining its description and rollout settings in the slider. The rollout defines the fraction of the control buckets that would be impacted by the new feature. The default is 50 and you can let it remain the same.</p>
+<p>On creating a new segment, you'll notice "No constraints (ALL will pass)" being displayed. This means since we haven't provided any constraints on our segment, all our requests will be a part of the control buckets. You may leave it to be empty for now.</p>
+<p>To finish our initial setup, we'll have to define a distribution among the variants for the segment. Click on "edit", select your variant's checkbox and use the slider to increase its percentage to 100. This means all our requests passing the segment will be distributed completely to the variant. Save the distribution and now make a request to the <code>flagr-hello</code> api endpoint. Make sure you have correctly initialised the environment variables and provided your <code>flagKey</code> in the <code>?key</code> query param. If you initialised the rollout to 50% and the message in your variant says "Privyet", you should receive "Privyet" in response half the times you make a request.</p>
+<h4 id="further-customisation">Further Customisation</h4>
+<p>Create a new variant, and this time enter a new message, say "Zdrastvuyte". In your segment, add a constraint on the location to be Russia. You can do this by adding <code>location</code> in "Property" and the value as <code>ru</code> with the conditional <code>==</code>. Click on "Add Constraint" and save your segment. Now, edit your distibution with the both the variants having 50-50 fractions. You may increase your rollout to 100% if you want all your Russian users to be greeted in the new fashion only. Test your api and observe how your response messages are distributed. Make sure you provide <code>ru</code> in the <code>?location</code> query param.</p>
+<p>If you followed all the steps correctly, you should get a mix of "Zdrastvuyte" and "Privyet", with a bit of "Hello!" too if the rollout was less than 100. Try playing around with your flag, customising your audience based on other properties like <code>language</code> and <code>age</code> and creating different segments for different demographic groups with their own distributions of different variants. When exploited to the fullest, you'll get to appreciate how handy Flagr is.</p>
+<p>I hope this exercise helped in your understanding of feature flags and made you gain more confidence in implementing them using Flagr. </p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "content.tabs.link", "navigation.instant"], "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+        <script src="../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
